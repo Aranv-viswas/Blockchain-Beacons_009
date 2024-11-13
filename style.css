@@ -1,0 +1,119 @@
+*{
+    font-family: inter;
+}
+.women-heading{
+    font-size: 1.71rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin: 30px 10px;
+}
+.details-heading{
+    font-size: .86rem;  
+    margin: 10px;
+    margin-bottom: 40px;
+}
+.filter-part{
+    padding:0px 10px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F8F7F6;
+   
+}
+div.sticky{
+    position: sticky;
+    top: 0px;
+}
+.filter-left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.filter-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.share-photo{
+    width: 30px;
+    height: 23px;
+}
+select{
+    padding: 8px 10px;
+}
+select:hover{
+    background-color: black;
+    color: white;
+}
+.save-search{
+    padding: 6px 10px;
+    background-color: black;
+    color: white;
+}
+
+.part-2{
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+} 
+.sidebar {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    overflow-y: auto;
+    font-weight: 500;
+    font-size: 14px;
+}
+.main-content {
+    width: 80%;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.product-card {
+    width: calc(33.33% - 20px);
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+.collapsible {
+    background-color: #e7e7e7;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.collapsible:after {
+    content: '\25BC';
+    float: right;
+}
+.collapsible.active:after {
+    content: '\25B2';
+}
+.content {
+    display: none;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+.content p {
+    margin: 5px 0;
+    font-weight:normal;
+    font-size: 14px;
+    line-height: 30px;
+}
