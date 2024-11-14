@@ -1,0 +1,241 @@
+*{
+    font-family: inter;
+}
+.men-heading{
+    font-size: 1.71rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin: 30px 10px;
+}
+.details-heading{
+    font-size: .86rem;  
+    margin: 10px;
+    margin-bottom: 40px;
+}
+.filter-part{
+    padding:0px 10px ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F8F7F6;
+}
+div.sticky{
+    position: sticky;
+    top: 0px;
+}
+.filter-left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.filter-mid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.text{
+    padding: 10px;
+}
+.filter-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.share-photo{
+    width: 30px;
+    height: 23px;
+}
+select{
+    padding: 8px 10px;
+}
+select:hover{
+    background-color: black;
+    color: white;
+}
+.save-search{
+    padding: 6px 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.part-2{
+    margin: 0;
+    display: flex;
+    /* height: 100vh; */
+    overflow: hidden;
+} 
+.sidebar {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    overflow-y: auto;
+    font-weight: 500;
+    font-size: 14px;
+}
+.collapsible{
+    font-size: small;
+}
+.content p:hover{
+    color: blueviolet;
+    font-style: italic;
+    cursor: pointer;
+}
+.related-ca{
+    font-size: small;
+    font-weight: normal;
+}
+.related-ca p:hover{
+    color: blueviolet;
+    font-style: italic;
+    cursor: pointer;
+}
+.no-results {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.collapsible {
+    background-color: #e7e7e7;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.collapsible:after {
+    content: '\25BC';
+    float: right;
+}
+.collapsible.active:after {
+    content: '\25B2';
+}
+.content {
+    display: none;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+.content p {
+    margin: 5px 0;
+    font-weight:normal;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.main-content {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    padding: 10px;
+    height: 200px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+/* 
+.product-card:hover {
+    transform: translateY(-5px);
+} */
+
+.product-image {
+    width: 100%;
+    height: 300px;
+    /* object-fit: cover; */
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-description {
+    color: #666;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.product-price {
+    color: #e44d26;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.error {
+    text-align: center;
+    padding: 20px;
+    color: #e44d26;
+    font-size: 1.2em;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.pagination-btn {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.pagination-btn:disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+    color: #999;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 5px;
+}
+
+.page-btn {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.page-btn.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pagination-btn:hover:not(:disabled),
+.page-btn:hover:not(.active) {
+    background-color: #f0f0f0;
+}
