@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="18" viewBox="0 0 18 18">
+  <defs>
+    <clipPath id="clip-app_search_b_1">
+      <rect width="18" height="18"/>
+    </clipPath>
+  </defs>
+  <g id="app_search_b_1" data-name="app_search_b – 1" clip-path="url(#clip-app_search_b_1)">
+    <g id="组_4143" data-name="组 4143" transform="translate(1 1)">
+      <g id="组_2" data-name="组 2" transform="translate(0 0)">
+        <g id="椭圆_1" data-name="椭圆 1" fill="none" stroke="#000" stroke-width="0.75">
+          <ellipse cx="7.225" cy="7.225" rx="7.225" ry="7.225" stroke="none"/>
+          <ellipse cx="7.225" cy="7.225" rx="6.85" ry="6.85" fill="none"/>
+        </g>
+        <line id="直线_1" data-name="直线 1" x2="4.134" y2="4.135" transform="translate(11.866 11.865)" fill="none" stroke="#000" stroke-width="0.75"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 0 10%;
+}
+
+#hero {
+    background-color: #fdf9ed;
+    padding: 4.5em 4em;
+    width: 100%;
+    height: 510px;
+    background: #fdf9ed;
+    background-image: url(resourse/20240808Rectangle.svg);
+    background-repeat: no-repeat;
+    background-position: 100%
+}
+
+#hero-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#hero-text img {
+    width: 19em;
+}
+
+#hero-text h1 {
+    color: #1c1c1c;
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1.2em;
+}
+
+#hero-text p {
+    color: #1c1c1c;
+    font-size: 26px;
+    font-weight: 300;
+    margin-top: 10px;
+    font-family: "Roboto", serif;
+}
+
+#hero-text span {
+    color: #a13920;
+}
+
+#hero #search {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+}
+
+#hero #search input {
+    flex: 1;
+    padding: 14px 40px;
+    cursor: pointer;
+}
+
+#hero #search button {
+    margin-left: 18px;
+    background-color: #1b1d18;
+    color: #ffffff;
+    padding: 14px 20px;
+    outline: none;
+    border: none;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+#hero #search #search-icon {
+    position: absolute;
+    left: 15px;
+    width: 1.3em;
+}
+
+#hero #search #photo-icon {
+    position: absolute;
+    right: 125px;
+    width: 2em;
+}
