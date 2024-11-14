@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar with Hover Dropdown</title>
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">MODESENS</div>
+    <ul class="nav-links">
+      <!-- Hover Dropdown for WOMEN -->
+      <li class="dropdown">
+        <a href="#">WOMEN</a>
+        <div class="dropdown-content">
+          <div class="column">
+            <h4>ALL WOMEN</h4>
+            <a href="#">Clothing</a>
+            <a href="#">Activewear</a>
+            <a href="#">Beachwear</a>
+            <a href="#">Coats</a>
+            <a href="#">Dresses</a>
+            <a href="#">Hosiery</a>
+            <a href="#">Jackets</a>
+            <a href="#">Jeans</a>
+            <a href="#">Jumpsuits</a>
+            <a href="#">Knitwear</a>
+            <a href="#">Lingerie</a>
+            <a href="#">Loungewear</a>
+            <a href="#">Pants</a>
+            <a href="#">Skirts</a>
+            <a href="#">Shorts</a>
+            <a href="#">Tops</a>
+          </div>
+          <div class="column">
+            <h4>SHOES</h4>
+            <a href="#">Boots</a>
+            <a href="#">Flats</a>
+            <a href="#">Loafers</a>
+            <a href="#">Platforms</a>
+            <a href="#">Pumps</a>
+            <a href="#">Sandals</a>
+            <a href="#">Sneakers</a>
+            <a href="#">Wedges</a>
+          </div>
+          <div class="column">
+            <h4>BAGS</h4>
+            <a href="#">Backpacks</a>
+            <a href="#">Belt Bags</a>
+            <a href="#">Clutches</a>
+            <a href="#">Crossbody Bags</a>
+            <a href="#">Handbags</a>
+            <a href="#">Shoulder Bags</a>
+            <a href="#">Totes</a>
+          </div>
+          <div class="column">
+            <h4>ACCESSORIES</h4>
+            <a href="#">Bag Accessories</a>
+            <a href="#">Belts</a>
+            <a href="#">Cases</a>
+            <a href="#">Face Masks</a>
+            <a href="#">Gloves</a>
+            <a href="#">Hair Accessories</a>
+            <a href="#">Hats</a>
+            <a href="#">Jewelry</a>
+            <a href="#">Keychains</a>
+            <a href="#">Opticals</a>
+            <a href="#">Scarves</a>
+            <a href="#">Sunglasses</a>
+            <a href="#">Ties</a>
+            <a href="#">Watches</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="#about">MEN</a></li>
+      <li><a href="#services">BEAUTY</a></li>
+      <li><a href="#contact">KIDS</a></li>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#designer">DESIGNER</a></li>
+      <li><a href="#community">COMMUNITY</a></li>
+      <li class="sale"><a href="#sale">SALE</a></li>
+    </ul>
+    
+    <!-- Search Bar with Icons -->
+    <div class="search-container">
+      <i class="fas fa-qrcode scanner-icon" onclick="openScannerPage()"></i>
+      <input type="text" class="search-bar" placeholder="Search...">
+      <i class="fas fa-search search-icon"></i>
+    </div>
+
+    <!-- Hamburger for mobile view -->
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </nav>
+
+  <script src="nav.js"></script>
+</body>
+</html>

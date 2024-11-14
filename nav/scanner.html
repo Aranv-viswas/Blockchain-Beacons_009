@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Upload for Scanner</title>
+  <link rel="stylesheet" href="scanner.css">
+</head>
+<body>
+
+  <div class="scanner-page">
+    <h1>Upload an Image for Scanning</h1>
+    <p>Click the button below to select an image for scanning:</p>
+
+    <!-- Image upload form -->
+    <input type="file" id="file-upload" class="file-upload" accept="image/*">
+    <button onclick="uploadImage()">Upload Image</button>
+
+    <div id="image-preview"></div>
+  </div>
+
+  <script src="scanner.js"></script>
+</body>
+</html>
