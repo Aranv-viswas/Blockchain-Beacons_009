@@ -1,4 +1,5 @@
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const mainContent = document.querySelector('.main-content');
     const searchBar = document.getElementById('search-bar');
@@ -10,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mainContent.innerHTML = '<div class="loading">Loading products...</div>';
 
-    fetch('https://demo2-afd7f-default-rtdb.firebaseio.com/.json')
+    fetch('https://womenprodetails-default-rtdb.firebaseio.com/.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         })
         .then(data => {
-            allProducts = data;
+            allProducts = Object.values(data); 
             filteredProducts = [...allProducts]; 
             displayProducts(currentPage);
             createPagination(Math.ceil(filteredProducts.length / productsPerPage));
@@ -34,113 +35,152 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         });
 
-    function handleSearch(e) {
-        const searchTerm = e.target.value.toLowerCase().trim();
-        filteredProducts = allProducts.filter(product => 
-            product.title.toLowerCase().includes(searchTerm)
-        );
-        currentPage = 1;
-        displayProducts(currentPage);
-        createPagination(Math.ceil(filteredProducts.length / productsPerPage));
-        if (filteredProducts.length === 0) {
-            mainContent.innerHTML = `
-                <div class="no-results">
-                    No products found matching "${searchTerm}"
-                </div>
-            `;
-        }
+function handleSearch(e) {
+    const searchTerm = e.target.value.toLowerCase().trim();
+    filteredProducts = allProducts.filter(product => 
+        product.title.toLowerCase().includes(searchTerm)
+    );
+    currentPage = 1;
+    displayProducts(currentPage);
+    createPagination(Math.ceil(filteredProducts.length / productsPerPage));
+    
+    if (filteredProducts.length === 0) {
+        mainContent.innerHTML = `
+            <div class="no-results">
+                No products found matching "${searchTerm}"
+            </div>
+        `;
     }
+}
 
-    function handleSort(e) {
-        const sortBy = e.target.value;
-        if (sortBy === 'default') {
+function handleSort(e) {
+    const sortBy = e.target.value;
+    switch(sortBy) {
+        case 'default':
             filteredProducts = [...allProducts];
-        } else if (sortBy === 'name-a-z') {
+            break;
+        case 'name-a-z':
             filteredProducts.sort((a, b) => a.title.localeCompare(b.title));
-        } else if (sortBy === 'name-z-a') {
+            break;
+        case 'name-z-a':
             filteredProducts.sort((a, b) => b.title.localeCompare(a.title));
-        }
-        currentPage = 1;
-        displayProducts(currentPage);
-        createPagination(Math.ceil(filteredProducts.length / productsPerPage));
+            break;
+    }
+    currentPage = 1;
+    displayProducts(currentPage);
+    createPagination(Math.ceil(filteredProducts.length / productsPerPage));
+}
+
+function displayProducts(page) {
+    mainContent.innerHTML = '';
+    const startIndex = (page - 1) * productsPerPage;
+    const endIndex = startIndex + productsPerPage;
+    const productsToDisplay = filteredProducts.slice(startIndex, endIndex);
+
+    if (productsToDisplay.length === 0) {
+        mainContent.innerHTML = `
+            <div class="no-results">
+                No products available
+            </div>
+        `;
+        return;
     }
 
-    function displayProducts(page) {
-        mainContent.innerHTML = '';
-        const startIndex = (page - 1) * productsPerPage;
-        const endIndex = startIndex + productsPerPage;
-        const productsToDisplay = filteredProducts.slice(startIndex, endIndex);
-        productsToDisplay.forEach(product => {
-            const productCard = `
-                <div class="product-card">
-                    <img src="${product.image}" alt="${product.title}" class="product-image">
-                    <div class="product-info">
-                        <div class="product-title">${product.title}</div>
-                        <div class="product-description">${product.description}</div>
-                        <div class="product-price">${product.price}</div>
-                    </div>
+    productsToDisplay.forEach(product => {
+        const productCard = `
+            <div class="product-card" data-product-id="${product.id}">
+                <img src="${product.image}" alt="${product.title}" class="product-image">
+                <div class="product-info">
+                    <div class="product-title">${product.title}</div>
+                    <div class="product-description">${product.description}</div>
+                    <div class="product-price">${product.price}</div>
                 </div>
-            `;
-            mainContent.innerHTML += productCard;
-        });
-    }
+            </div>
+        `;
+        mainContent.innerHTML += productCard;
+    });
 
-    function createPagination(totalPages) {
-        const existingPagination = document.querySelector('.pagination');
-        if (existingPagination) {
-            existingPagination.remove();
+    document.querySelectorAll('.product-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const productId = card.dataset.productId;
+            window.location.href = `women_product_details.html?id=${productId}`;
+        });
+    });
+}
+
+function createPagination(totalPages) {
+    const existingPagination = document.querySelector('.pagination');
+    if (existingPagination) {
+        existingPagination.remove();
+    }
+    
+    if (totalPages <= 0) return;
+
+    const paginationContainer = document.createElement('div');
+    paginationContainer.className = 'pagination';
+    
+    const prevButton = document.createElement('button');
+    prevButton.textContent = 'Previous';
+    prevButton.className = 'pagination-btn';
+    prevButton.disabled = currentPage === 1;
+    prevButton.addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            updatePagination();
+            displayProducts(currentPage);
+            scrollToTop();
         }
-        if (totalPages <= 0) return; 
-        const paginationContainer = document.createElement('div');
-        paginationContainer.className = 'pagination';
-        const prevButton = document.createElement('button');
-        prevButton.textContent = 'Previous';
-        prevButton.className = 'pagination-btn';
-        prevButton.disabled = currentPage === 1;
-        prevButton.addEventListener('click', () => {
-            if (currentPage > 1) {
-                currentPage--;
-                updatePagination();
-                displayProducts(currentPage);
-            }
-        });
-        const nextButton = document.createElement('button');
-        nextButton.textContent = 'Next';
-        nextButton.className = 'pagination-btn';
-        nextButton.disabled = currentPage === totalPages;
-        nextButton.addEventListener('click', () => {
-            if (currentPage < totalPages) {
-                currentPage++;
-                updatePagination();
-                displayProducts(currentPage);
-            }
-        });
-        const pageNumbers = document.createElement('div');
-        pageNumbers.className = 'page-numbers';
-        for (let i = 1; i <= totalPages; i++) {
-            const pageButton = document.createElement('button');
-            pageButton.textContent = i;
-            pageButton.className = `page-btn ${currentPage === i ? 'active' : ''}`;
-            pageButton.addEventListener('click', () => {
+    });
+
+    const nextButton = document.createElement('button');
+    nextButton.textContent = 'Next';
+    nextButton.className = 'pagination-btn';
+    nextButton.disabled = currentPage === totalPages;
+    nextButton.addEventListener('click', () => {
+        if (currentPage < totalPages) {
+            currentPage++;
+            updatePagination();
+            displayProducts(currentPage);
+            scrollToTop();
+        }
+    });
+
+    const pageNumbers = document.createElement('div');
+    pageNumbers.className = 'page-numbers';
+    
+    for (let i = 1; i <= totalPages; i++) {
+        const pageButton = document.createElement('button');
+        pageButton.textContent = i;
+        pageButton.className = `page-btn ${currentPage === i ? 'active' : ''}`;
+        pageButton.addEventListener('click', () => {
+            if (currentPage !== i) {
                 currentPage = i;
                 updatePagination();
                 displayProducts(currentPage);
-            });
-            pageNumbers.appendChild(pageButton);
-        }
-        paginationContainer.appendChild(prevButton);
-        paginationContainer.appendChild(pageNumbers);
-        paginationContainer.appendChild(nextButton);
-        mainContent.parentNode.insertBefore(paginationContainer, mainContent.nextSibling);
-        function updatePagination() {
-            document.querySelectorAll('.page-btn').forEach(btn => {
-                btn.classList.toggle('active', parseInt(btn.textContent) === currentPage);
-            });
-            prevButton.disabled = currentPage === 1;
-            nextButton.disabled = currentPage === totalPages;
-        }
+                scrollToTop();
+            }
+        });
+        pageNumbers.appendChild(pageButton);
     }
-});
+
+    paginationContainer.appendChild(prevButton);
+    paginationContainer.appendChild(pageNumbers);
+    paginationContainer.appendChild(nextButton);
+    
+    document.querySelector('.content-wrapper').appendChild(paginationContainer);
+
+    function updatePagination() {
+        document.querySelectorAll('.page-btn').forEach(btn => {
+            btn.classList.toggle('active', parseInt(btn.textContent) === currentPage);
+        });
+        prevButton.disabled = currentPage === 1;
+        nextButton.disabled = currentPage === totalPages;
+    }
+
+    function scrollToTop() {
+        mainContent.scrollIntoView({ behavior: 'smooth' });
+    }
+}
 
 document.querySelectorAll('.collapsible').forEach(button => {
     button.addEventListener('click', function() {
@@ -152,4 +192,5 @@ document.querySelectorAll('.collapsible').forEach(button => {
             content.style.display = 'block';
         }
     });
+});
 });

@@ -1,0 +1,254 @@
+[
+    {
+      "id": 1,
+      "title": "Dolce & Gabbana",
+      "description": "Daymaster Chunky-sole Trainers",
+      "price": "€443 (30% OFF) to €1136",
+      "image": 
+        "https://m.media-amazon.com/images/I/61BOt894PEL._AC_UL480_FMwebp_QL65_.jpg",
+      "avg_rating":"4.5",
+      "categories":"women's wearing",
+      "stock":"20", 
+      "size":["8", "9", "10", "11"]
+    },
+    {
+        "id": 2,
+        "title": "Chloé",
+        "description": "Black Woody Flat Sandals",
+        "price": "€273 (37% OFF) to €622",
+        "image": 
+          "https://m.media-amazon.com/images/I/6181KdcckwL._AC_UL480_FMwebp_QL65_.jpg",
+          "avg_rating":"4.5",
+          "categories":"women's wearing",
+          "stock":"20", 
+          "size":["8", "9", "10", "11"]
+      },
+      {
+        "id": 3,
+        "title": "Zimmermann",
+        "description": "Halliday Floral Lace Trim Shirt",
+        "price": "€372 (48% OFF) to €755",
+        "image": 
+          "https://m.media-amazon.com/images/I/71TMA6wt4WL._AC_UL480_FMwebp_QL65_.jpg", 
+          "avg_rating":"4.5",
+          "categories":"women's clothing",
+          "stock":"20", 
+          "size":["S", "M", "L", "XL"]
+      },
+      {
+        "id": 4,
+        "title": "Zimmermann",
+        "description": "Ottie Paisley Print Linen Shorts",
+        "price": "€340 to €637",
+        "image": 
+          "https://m.media-amazon.com/images/I/51kV2t0KGNL._AC_UL480_FMwebp_QL65_.jpg", 
+          "avg_rating":"4.1",
+          "categories":"women's clothing",
+          "stock":"25", 
+          "size":["S", "M", "L", "XL"]
+      }, 
+      {
+        "id": 5,
+        "title": "ZIMMERMANN",
+        "description": "Halliday Relaxed Shirt Cream Watercolour Floral In Ivory",
+        "price": "€420 (44% OFF) to €782",
+        "image": 
+          "https://m.media-amazon.com/images/I/61LvLgGBPIL._AC_UL480_FMwebp_QL65_.jpg", 
+          "avg_rating":"4.0",
+          "categories":"women's clothing",
+          "stock":"10", 
+          "size":["S", "M", "L", "XL"]
+      }, 
+      {
+        "id": 6,
+        "title": "ZIMMERMANN",
+        "description": "Halliday Plunge Mini Dress Cream Multi Floral",
+        "price": "€476 (49% OFF) to €954",
+        "image": 
+          "https://m.media-amazon.com/images/I/81HSeEsVOTL._AC_UL480_FMwebp_QL65_.jpg", 
+          "avg_rating":"4.7",
+          "categories":"women's clothing",
+          "stock":"No stock", 
+          "size":["S", "M", "L", "XL"]
+      },
+      {
+        "id": 7,
+        "title": "MAX MARA",
+        "description": "Teddy Bear Icon Alpaca And Wool-blend Coat In Grey",
+        "price": "€1689 (23% OFF) to €5444",
+        "image": 
+          "https://m.media-amazon.com/images/I/71RG-3CRhQL._AC_UL480_FMwebp_QL65_.jpg", 
+          "avg_rating":"4.9",
+          "categories":"women's clothing",
+          "stock":"50", 
+          "size":["S", "M", "L", "XL"]
+      },
+      {
+        "id": 8,
+        "title": "Dolce & Gabbana",
+        "description": "Intarsia Logo Turtleneck Virgin Wool Sweater In Black",
+        "price": "€864 (46% OFF) to €2405",
+        "image": 
+          "https://m.media-amazon.com/images/I/61rUyaTJPxL._AC_UL480_FMwebp_QL65_.jpg", 
+          "avg_rating":"4.5",
+          "categories":"women's wearing",
+          "stock":"30", 
+          "size":["8", "9", "10", "11"]
+      },
+      {
+        "id": 9,
+        "title": "ZIMMERMANN",
+        "description": "Green And White Paisley Print High Neck Shirt In Green Paisley",
+        "price": "€405 (44% OFF) to €752",
+        "image": 
+          "https://m.media-amazon.com/images/I/619w4iinF9L._AC_UL480_FMwebp_QL65_.jpg",
+          "avg_rating":"3.5",
+          "categories":"women's clothing",
+          "stock":"90", 
+          "size":["S", "M", "L", "XL"]
+      },
+      {
+        "id": 10,
+        "title": "ZIMMERMANN",
+        "description": "Ottie Paisley Long Sleeve Linen Midi Dress In Green Paisley",
+        "price": "€527 (50% OFF) to €1192",
+        "image": 
+          "https://m.media-amazon.com/images/I/81QKUV4VviL._AC_UL480_FMwebp_QL65_.jpg",
+          "avg_rating":"4.5",
+          "categories":"women's clothing",
+          "stock":"20", 
+          "size":["S", "M", "L", "XL"]
+      },
+      {
+        "id": 11,
+        "title": "JACQUEMUS", 
+        "description": "Le Bisou Perle Crinkled Leather Bag In Metallic",
+        "price": "€523 (27% OFF) to €802",
+        "image": 
+          "https://m.media-amazon.com/images/I/71XarSGYpgL._AC_UL480_FMwebp_QL65_.jpg",
+        "avg_rating":"4.5",
+          "categories":"women's stylis bags",
+          "stock":"10", 
+          "size":["S", "M", "L", "XL"]
+      },
+      {
+        "id": 12,
+        "title": "ZIMMERMANN",
+        "description": "Ottie Paisley Print Linen Minidress In Green Paisley",
+        "price": "€460 to €897",
+        "image": 
+          "https://m.media-amazon.com/images/I/51bg1Rl7O7L._AC_UL480_FMwebp_QL65_.jpg", 
+          "avg_rating":"4.5",
+          "categories":"women's stylis bags",
+          "stock":"10", 
+          "size":["S", "M", "L", "XL"]
+      },
+      {
+        "id": 13,
+        "title": "AGOLDE",
+        "description": "Hilla Frayed Organic Denim Maxi Skirt In Fragment",
+        "price": "€55 (75% OFF) to €397",
+        "image": 
+          "https://m.media-amazon.com/images/I/618xHkGNxGL._AC_UL480_FMwebp_QL65_.jpg",
+          "avg_rating":"4.5",
+          "categories":"women's clothing",
+          "stock":"50", 
+          "size":["S", "M", "L", "XL"]
+      },
+      {
+        "id": 14,
+        "title": "MONCLER",
+        "description": "Stennes Performance Down Ski Jacket In Black",
+        "price": "€945 to €2351",
+        "image": 
+          "https://m.media-amazon.com/images/I/81bBwHn9NBL._AC_UL480_FMwebp_QL65_.jpg",
+          "avg_rating":"4.5",
+          "categories":"women's clothing",
+          "stock":"60", 
+          "size":["S", "M", "L", "XL"]
+      },
+      {
+        "id": 15,
+        "title": "Dolce & Gabbana",
+        "description": "Daymaster Chunky-sole Trainers",
+        "price": "€443 (30% OFF) to €1136",
+        "image": 
+          "https://m.media-amazon.com/images/I/71v6STXRsgL._AC_UL480_FMwebp_QL65_.jpg",
+          "avg_rating":"4.6",
+          "categories":"women's wearing",
+          "stock":"200", 
+          "size":["8", "9", "10", "11"]
+      },
+      {
+        "id": 16,
+        "title": "Dolce & Gabbana",
+        "description": "Logo-plaque Loafers In Black",
+        "price": "€509 (38% OFF) to €904",
+        "image": 
+          "https://m.media-amazon.com/images/I/61XrCE4oLLS._AC_UL480_FMwebp_QL65_.jpg",
+          "avg_rating":"4.9",
+          "categories":"women's wearing",
+          "stock":"600", 
+          "size":["8", "9", "10", "11"]
+      },
+      {
+        "id": 17,
+        "title": "Dolce & Gabbana",
+        "description": "Polka Dot Ballet Flats In Blue",
+        "price": "€473 (38% OFF) to €861",
+        "image": 
+          "https://m.media-amazon.com/images/I/71dsmh1-tAL._AC_UL480_FMwebp_QL65_.jpg", 
+          "avg_rating":"3.6",
+          "categories":"women's wearing",
+          "stock":"100", 
+          "size":["8", "9", "10", "11"]
+      },
+      {
+        "id": 18,
+        "title": "Dolce & Gabbana",
+        "description": "Polka-dot Print Silk Twill Shirt In White",
+        "price": "€851 (43% OFF) to €1659",
+        "image": 
+          "https://m.media-amazon.com/images/I/51m9mBo5GaL._AC_UL480_FMwebp_QL65_.jpg"  ,
+          "avg_rating":"4.0",
+          "categories":"women's wearing",
+          "stock":"20", 
+          "size":["8", "9", "10", "11"]
+      },
+      {
+        "id": 19,
+        "title": "Dolce & Gabbana",
+        "description": "Polka-dot Tulle Midi Dress In Black",
+        "price": "€1590 (41% OFF) to €3800",
+        "image": 
+          "https://m.media-amazon.com/images/I/716sGzPyhyL._AC_UL480_FMwebp_QL65_.jpg",
+          "avg_rating":"3.2",
+          "categories":"women's wearing",
+          "stock":"10", 
+          "size":["8", "9", "10", "11"]
+      },
+      {
+        "id": 20,
+        "title": "ZIMMERMANN",
+        "description": "Ottie Paisley Print Oversize Shirt In Multi Paisley",
+        "price": "€439 (35% OFF) to €755",
+        "image": 
+          "https://m.media-amazon.com/images/I/31i9vZGU1BL._AC_UL480_FMwebp_QL65_.jpg",
+          "avg_rating":"4.6",
+          "categories":"women's clothing",
+          "stock":"40", 
+          "size":["S", "M", "L", "XL"]
+      },
+       {
+      "id": 21,
+      "title": "STELLA MCCARTNEY",
+      "description": "Eclypse Trainers In White",
+      "price": "€281 to €672",
+      "image": 
+        "https://m.media-amazon.com/images/I/618qUPvPoqL._AC_UL480_FMwebp_QL65_.jpg",
+        "avg_rating":"4.2",
+          "categories":"women's wearing",
+          "stock":"105", 
+          "size":["8", "9", "10", "11"]
+    }
+]

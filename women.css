@@ -1,73 +1,87 @@
-*{
+* {
     font-family: inter;
 }
-.women-heading{
+
+.women-heading {
     font-size: 1.71rem;
     text-transform: capitalize;
     font-weight: 500;
     margin: 30px 10px;
 }
-.details-heading{
+
+.details-heading {
     font-size: .86rem;  
     margin: 10px;
     margin-bottom: 40px;
 }
-.filter-part{
-    padding:0px 10px ;
+
+.filter-part {
+    padding: 0px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #F8F7F6;
 }
-div.sticky{
+
+div.sticky {
     position: sticky;
     top: 0px;
+    z-index: 100;
 }
-.filter-left{
+
+.filter-left {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
 }
-.filter-mid{
+
+.filter-mid {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
-.text{
+
+.text {
     padding: 10px;
 }
-.filter-right{
+
+.filter-right {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
-.share-photo{
+
+.share-photo {
     width: 30px;
     height: 23px;
 }
-select{
+
+select {
     padding: 8px 10px;
 }
-select:hover{
+
+select:hover {
     background-color: black;
     color: white;
 }
-.save-search{
+
+.save-search {
     padding: 6px 10px;
     background-color: black;
     color: white;
     cursor: pointer;
 }
 
-.part-2{
+.part-2 {
     margin: 0;
     display: flex;
-    /* height: 100vh; */
+    min-height: calc(100vh - 200px); /* Adjust based on your header height */
     overflow: hidden;
 } 
+
 .sidebar {
     width: 20%;
     background-color: #f4f4f4;
@@ -76,28 +90,20 @@ select:hover{
     font-weight: 500;
     font-size: 14px;
 }
-.collapsible{
-    font-size: small;
+
+.content-wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
 }
-.content p:hover{
-    color: blueviolet;
-    font-style: italic;
-    cursor: pointer;
-}
-.related-ca{
-    font-size: small;
-    font-weight: normal;
-}
-.related-ca p:hover{
-    color: blueviolet;
-    font-style: italic;
-    cursor: pointer;
-}
-.no-results {
-    text-align: center;
+
+.main-content {
+    flex: 1;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     padding: 20px;
-    font-size: 1.1em;
-    color: #666;
 }
 
 .collapsible {
@@ -111,52 +117,59 @@ select:hover{
     font-size: 16px;
     margin-bottom: 5px;
 }
+
 .collapsible:after {
     content: '\25BC';
     float: right;
 }
+
 .collapsible.active:after {
     content: '\25B2';
 }
+
 .content {
     display: none;
     padding-left: 15px;
     margin-bottom: 10px;
 }
+
 .content p {
     margin: 5px 0;
-    font-weight:normal;
+    font-weight: normal;
     font-size: 14px;
     line-height: 30px;
 }
 
-.main-content {
-    /* max-width: 1200px; */
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
+.content p:hover {
+    color: blueviolet;
+    font-style: italic;
+    cursor: pointer;
+}
+
+.related-ca {
+    font-size: small;
+    font-weight: normal;
+}
+
+.related-ca p:hover {
+    color: blueviolet;
+    font-style: italic;
+    cursor: pointer;
 }
 
 .product-card {
     padding: 10px;
-    height: 200px;
+    height: 500px;
     background: white;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease;
 }
-/* 
-.product-card:hover {
-    transform: translateY(-5px);
-} */
 
 .product-image {
-    width: 100%;
+    width: 200px;
     height: 300px;
-    /* object-fit: cover; */
 }
 
 .product-info {
@@ -196,12 +209,23 @@ select:hover{
     font-size: 1.2em;
 }
 
+.no-results {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1em;
+    color: #666;
+    grid-column: 1 / -1;
+}
+
 .pagination {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
+    padding: 20px 0;
     gap: 10px;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #eee;
 }
 
 .pagination-btn {
@@ -209,6 +233,7 @@ select:hover{
     border: 1px solid #ddd;
     background-color: #fff;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .pagination-btn:disabled {
@@ -227,6 +252,7 @@ select:hover{
     border: 1px solid #ddd;
     background-color: #fff;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .page-btn.active {
@@ -238,4 +264,5 @@ select:hover{
 .pagination-btn:hover:not(:disabled),
 .page-btn:hover:not(.active) {
     background-color: #f0f0f0;
+    transform: translateY(-2px);
 }
