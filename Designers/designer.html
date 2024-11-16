@@ -1,105 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Designers A-Z</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designers A-Z</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <!-- Navbar content goes here (e.g., logo, navigation links) -->
+    </header>
 
-<header>
-  <!-- Header content is empty -->
-</header>
+    <!-- Main Content Container -->
+    <div class="container">
+        <!-- Page Introduction -->
+        <div class="head">
+            <h1>Designers A-Z</h1>
+            <p>Discover our global edit of luxury designers. Personalize your shopping experience by selecting your favorites to receive new sale and arrival alerts.</p>
+        </div>
 
-<div class="container">
-  <h1>Designers A-Z</h1>
-  <p>Discover our global edit of luxury designers. Personalize your shopping experience by selecting your favorites to receive new sale and arrival alerts.</p>
-  
-  <!-- Alphabet Navigation -->
-  <div class="alphabet-nav">
-    <span class="icon">&#128717;</span> <!-- Shopping bag icon -->
-    <div class="alphabet-links">
-      <a href="#A">A</a> <a href="#B">B</a> <a href="#C">C</a> <a href="#D">D</a> <a href="#E">E</a>
-      <!-- Continue with letters as needed -->
-      <a href="#Z">Z</a> <a href="#">#</a>
+        <!-- Alphabet Navigation and Search Filter -->
+        <div class="alphabet-filter">
+            <div class="alphabet-links">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="alphabet-link" data-target="A">A</span>
+                <span class="alphabet-link" data-target="B">B</span>
+                <span class="alphabet-link" data-target="C">C</span>
+                <span class="alphabet-link" data-target="D">D</span>
+                <span class="alphabet-link" data-target="E">E</span>
+                <span class="alphabet-link" data-target="Z">Z</span>
+                <span class="alphabet-link" data-target="#">#</span>
+            </div>
+            <div class="search-container">
+                <input type="text" id="filter-input" placeholder="Filter by designer name">
+                <i class="fas fa-search search-icon" id="search-icon"></i>
+            </div>
+        </div>
+
+        <h2>My Favorite Designers</h2>
+        <p class="left-align">Tap the heart icon to set an alert for updates on new sales and latest arrivals.</p>
+
+        <!-- Designer Sections (starting with A) -->
+        <div id="A" class="designer-section">
+            <h2>A</h2>
+            <div class="designer-grid">
+                <div class="designer">A BATHING APE</div>
+                <div class="designer">A BETTER MISTAKE</div>
+                <div class="designer">A COLLECTIVE STORY</div>
+                <div class="designer">A & A STORY</div>
+                <div class="designer">A BEAUTIFUL STORY</div>
+                <div class="designer">A BLONDE AND HER BAG</div>
+            </div>
+        </div>
+
+        <div id="B" class="designer-section">
+            <h2>B</h2>
+            <div class="designer-grid">
+                <div class="designer">B & A BY BETSY AND ADAM</div>
+                <div class="designer">B & B ITALIA</div>
+                <div class="designer">B BRENTANO</div>
+                <div class="designer">B BRIAN ATWOOD</div>
+                <div class="designer">B+AB</div>
+                <div class="designer">B O C</div>
+            </div>
+        </div>
+
+        <div id="C" class="designer-section">
+            <h2>C</h2>
+            <div class="designer-grid">
+                <div class="designer">C P COMPANY</div>
+                <div class="designer">C CLASSIC</div>
+                <div class="designer">C. WONDER</div>
+                <div class="designer">C-CLIQUE</div>
+                <div class="designer">C.J.M</div>
+                <div class="designer">CABAIA</div>
+            </div>
+        </div>
+
+        <div id="D" class="designer-section">
+            <h2>D</h2>
+            <div class="designer-grid">
+                <div class="designer">D STYLES</div>
+                <div class="designer">D O E N</div>
+                <div class="designer">D EXTERIOR</div>
+                <div class="designer">D&G</div>
+                <div class="designer">D.RT</div>
+                <div class="designer">D.O.G</div>
+            </div>
+        </div>
+
+        <div id="E" class="designer-section">
+            <h2>E</h2>
+            <div class="designer-grid">
+                <div class="designer">E RA</div>
+                <div class="designer">E BY DESIGN</div>
+                <div class="designer">E.L.F</div>
+                <div class="designer">E-Z UP</div>
+                <div class="designer">E. LUNA</div>
+                <div class="designer">E-GO</div>
+            </div>
+        </div>
     </div>
-    <div class="filter-container">
-      <input type="text" id="filter-input" placeholder="Filter by designer name">
-      <span class="search-icon">&#128269;</span> <!-- Search icon -->
-    </div>
-  </div>
 
-  <h2>My Favorite Designers</h2>
-  <p class="left-align">Tap the heart icon to set an alert for updates on new sales and latest arrivals.</p>
-  
-  <!-- Designer List Sections -->
-  <div id="A" class="designer-section">
-    <h2>A</h2>
-    <div class="designer-grid">
-      <div class="designer">A BATHING APE</div>
-      <div class="designer">A BETTER MISTAKE</div>
-      <div class="designer">A COLLECTIVE STORY</div>
-      <div class="designer">A & A STORY</div>
-      <div class="designer">A BEAUTIFUL STORY</div>
-      <div class="designer">A BLONDE AND HER BAG</div>
-    </div>
-  </div>
-  <div id="B" class="designer-section">
-    <h2>B</h2>
-    <div class="designer-grid">
-      <div class="designer">B & A BY BETSY AND ADAM</div>
-      <div class="designer">B & B ITALIA</div>
-      <div class="designer">B BRENTANO</div>
-      <div class="designer">B BRIAN ATWOOD</div>
-      <div class="designer">B+AB</div>
-      <div class="designer">B O C</div>
-    </div>
-  </div>
+    <!-- Footer -->
+    <footer></footer>
 
-  <div id="C" class="designer-section">
-    <h2>C</h2>
-    <div class="designer-grid">
-      <div class="designer">C P COMPANY</div>
-      <div class="designer">C CLASSIC</div>
-      <div class="designer">C. WONDER</div>
-      <div class="designer">C-CLIQUE</div>
-      <div class="designer">C.J.M</div>
-      <div class="designer">CABAIA</div>
-    </div>
-  </div>
-
-  <div id="D" class="designer-section">
-    <h2>D</h2>
-    <div class="designer-grid">
-      <div class="designer">D STYLES</div>
-      <div class="designer">D O E N</div>
-      <div class="designer">D EXTERIOR</div>
-      <div class="designer">D&G</div>
-      <div class="designer">D.RT</div>
-      <div class="designer">D.O.G</div>
-    </div>
-  </div>
-
-  <div id="E" class="designer-section">
-    <h2>E</h2>
-    <div class="designer-grid">
-      <div class="designer">E RA</div>
-      <div class="designer">E BY DESIGN</div>
-      <div class="designer">E.L.F</div>
-      <div class="designer">E-Z UP</div>
-      <div class="designer">E. LUNA</div>
-      <div class="designer">E-GO</div>
-    </div>
-  </div>
-
-  <!-- Add more sections as needed -->
-</div>
-
-<footer>
-  <!-- Footer content is empty -->
-</footer>
-
-<script src="script.js"></script>
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

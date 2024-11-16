@@ -1,0 +1,385 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+/* Header Titles */
+.main-heading {
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0 5px;
+}
+
+.sub-heading {
+    text-align: center;
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #ddd;
+    gap: 10px;
+}
+
+.tab-link {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tab-link.active {
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px 0;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    right: -535px !important;
+}
+
+.search-container input[type="text"] {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-container input[type="text"]:focus {
+    border-color: black;
+}
+
+/* Blog Grid */
+.blog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.blogImage {
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.blog-article {
+    width: 480px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+}
+
+.blog-article img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-content {
+    padding: 15px;
+}
+
+.blog-content h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.blog-meta {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.blog-content p {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    float: right;
+    margin-bottom: 13px;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.followbox {
+    width: 50px;
+    height: 35px;
+    padding: 5px 10px;
+    border: 1px solid black;
+}
+
+.followbox:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Discover Box */
+.discoverBox {
+    width: 30%;
+    border: 1px solid gray;
+    height: 480px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.discoverBox .discoverUpper {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.discoverBox .discoverUpper h4 {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}
+
+.discoverBox .discoverUpper img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.discoverBox .discoverMiddle {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.discoverBox .discoverMiddle h4 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.discoverBox .discoverLowerrow {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.discoverBox .discoverLowerrow img {
+    width: 45%;
+    border-radius: 5px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.discoverBox .discoverLowerrow img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Styles for Discover Box */
+@media screen and (max-width: 1200px) {
+    .discoverBox {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .discoverBox {
+        width: 60%;
+        margin: 20px auto;
+    }
+
+    .discoverBox .discoverUpper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .discoverBox .discoverUpper h4 {
+        margin-bottom: 10px;
+    }
+
+    .discoverBox .discoverMiddle {
+        padding: 15px;
+    }
+
+    .discoverBox .discoverLowerrow {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .discoverBox .discoverLowerrow img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .discoverBox {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .discoverBox .discoverUpper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .discoverBox .discoverUpper h4 {
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
+
+    .discoverBox .discoverMiddle {
+        padding: 10px;
+    }
+
+    .discoverBox .discoverLowerrow img {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .discoverBox {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .discoverBox .discoverUpper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .discoverBox .discoverUpper h4 {
+        font-size: 1em;
+    }
+
+    .discoverBox .discoverMiddle {
+        padding: 10px;
+    }
+
+    .discoverBox .discoverLowerrow img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+/* General Responsiveness */
+@media screen and (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .blog-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .discoverBox {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .search-container {
+        right: 0;
+    }
+
+    .disIMgBox {
+        width: 100%;
+    }
+
+    .followbox {
+        width: 60px;
+        height: 40px;
+    }
+}
+
+/* Flexbox Layout Adjustments */
+.discoverContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.discoverUpper {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.discoverMiddle h4 {
+    text-align: center;
+}
+
+.discoverLowerrow {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.discoverLowerrow img {
+    width: 60%;
+}
+
+.profImg {
+    border: 1px solid;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.profImg img {
+    width: 100%;
+}
+
+.disUpperinner {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.disIMgBox {
+    width: 40%;
+}
+
+.disIMgBox:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
