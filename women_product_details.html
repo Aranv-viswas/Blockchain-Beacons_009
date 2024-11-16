@@ -80,6 +80,164 @@
             color: black;
            font-size: 15px;
         }
+        @media screen and (max-width: 1200px) {
+        .product-details {
+          max-width: 960px;
+          padding: 15px;
+          gap: 30px;
+        }
+
+        .product-image img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      /* Tablets */
+      @media screen and (max-width: 992px) {
+        .product-details {
+          max-width: 720px;
+          padding: 15px;
+          gap: 20px;
+        }
+
+        .product-image {
+          max-width: 400px;
+        }
+
+        .title {
+          font-size: 22px;
+        }
+
+        .price {
+          font-size: 18px;
+        }
+      }
+      /* mobile */
+      @media screen and (max-width: 768px) {
+        .product-details {
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          padding: 10px;
+        }
+
+        .product-image,
+        .product-info {
+          width: 100%;
+          max-width: 500px;
+          flex: none;
+        }
+
+        .product-image {
+          padding: 10px;
+        }
+
+        .product-image img {
+          width: 100%;
+          height: auto;
+          max-height: 400px;
+          object-fit: contain;
+        }
+
+        .size-options {
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+
+        .size-option {
+          padding: 6px 12px;
+          min-width: 40px;
+          text-align: center;
+        }
+      }
+
+      /* Mobile  */
+      @media screen and (max-width: 576px) {
+        .product-details {
+          padding: 10px;
+        }
+
+        .product-image,
+        .product-info {
+          padding: 15px;
+        }
+
+        .title {
+          font-size: 20px;
+        }
+
+        .price {
+          font-size: 16px;
+        }
+
+        .description {
+          font-size: 14px;
+        }
+
+        .rating,
+        .stock,
+        .category {
+          font-size: 14px;
+        }
+
+        .sizes h3 {
+          font-size: 16px;
+        }
+
+        .size-option {
+          padding: 5px 10px;
+          font-size: 14px;
+        }
+
+        button {
+          width: calc(100% - 30px);
+          margin: 15px;
+        }
+
+        button a {
+          font-size: 14px;
+        }
+      }
+
+      /* Extra small devices */
+      @media screen and (max-width: 375px) {
+        .product-details {
+          padding: 5px;
+        }
+
+        .product-image,
+        .product-info {
+          padding: 10px;
+        }
+
+        .title {
+          font-size: 18px;
+        }
+
+        .size-options {
+          justify-content: center;
+        }
+
+        .error {
+          font-size: 14px;
+          padding: 15px;
+        }
+      }
+
+      @media (hover: none) and (pointer: coarse) {
+        .size-option {
+          min-height: 44px;
+          min-width: 44px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        button {
+          min-height: 44px;
+        }
+      }
     </style>
 </head>
 <body>
