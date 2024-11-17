@@ -16,12 +16,14 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1em;
-    background-color: #f8f8f8;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 10000;
 }
 
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
+.logo img {
+    width: 150px;
 }
 
 .nav-links {
@@ -42,7 +44,8 @@ body {
 }
 
 .nav-links a:hover {
-    color: #007BFF; /* Hover color */
+    padding-bottom: 5px;
+    border-bottom: 1px solid #C00000;
 }
 
 .nav-links li.sale a {
@@ -66,13 +69,16 @@ body {
     padding: 20px;
     top: 100%;
     left: 0;
-    display: flex;
     gap: 20px; /* Space between columns */
 }
 
 /* Show the dropdown content when hovering over the parent (WOMEN) */
 .dropdown:hover .dropdown-content {
     display: flex; /* Make it visible on hover */
+}
+
+.nav-links > li > a {
+    font-size: 13px;
 }
 
 /* Columns inside dropdown */
@@ -98,7 +104,7 @@ body {
 }
 
 /* Search Bar with Icons */
-.search-container {
+.search-container-1 {
     position: relative;
     max-width: 300px;
     width: 100%;

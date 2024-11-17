@@ -7,6 +7,14 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+}
+
 main {
     padding: 0 10%;
 }
@@ -491,6 +499,21 @@ main {
 #trending #container img {
     width: 80%;
     height: 200px;
+}
+
+/* to top nav */
+#to-top {
+    position: fixed;
+    right: 0;
+    bottom: 30%;
+}
+
+#to-top {
+    width: 32px;
+}
+
+#to-top:hover {
+    border-bottom: 1px solid #000;
 }
 
 
