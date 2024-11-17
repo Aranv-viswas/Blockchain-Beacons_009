@@ -7,7 +7,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
+main {
     padding: 0 10%;
 }
 
@@ -423,7 +423,7 @@ body {
 /* trending */
 #trending {
     text-align: center;
-    margin-bottom: 3em;
+    margin-bottom: 6em;
 }
 
 #trending h2 {
@@ -491,4 +491,62 @@ body {
 #trending #container img {
     width: 80%;
     height: 200px;
+}
+
+
+/* Footer */
+hr {
+    margin: 0 0 2em;
+}
+
+footer {
+    padding: 0 10px;
+}
+
+footer #container {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+footer .head-footer {
+    font-size: 15.4px;
+    color: #1c1c1c;
+    margin-bottom: 10px;
+}
+
+footer .lists {
+    font-size: 14px;
+    color: #7F7F7F;
+    line-height: 24px;
+}
+
+footer img {
+    margin: 0 8px;
+}
+
+footer #container2 img {
+    width: 40px;
+}
+
+footer #container2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+footer #container2 div {
+    display: flex;
+    align-items: center;
+}
+
+footer #container2 p {
+    font-size: 13px;
+    color: #1c1c1c;
+}
+
+footer #container2 #logos img{
+    width: 30px;
 }
