@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Fastion & Designer Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=ios_share" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=hotel_class" />
+</head>
+<body>
+
+
+    <h1 class="women-heading">Women's Fashion & Designer Products</h1>
+    <p class="details-heading">Shop women's fashion from 600+ stores. Get the best deals and compare prices. Discover new arrivals for designer fashion for women.</p>
+    <div class="filter-part sticky">
+        <div class="filter-left">
+             <p>FILTER BY:</p>
+             <select  id="filter-sale">
+                <option value="">Sale</option>
+                <option value="10%off">10% Off</option>
+                <option value="20%off">20% Off</option>
+                <option value="30%off">30% Off</option>
+                <option value="40%off">40% Off</option>
+                <option value="50%off">50% Off</option>
+                <option value="60%off">60% Off</option>
+             </select>
+             <select id="filter-price">
+                <option value="">Price Range</option>
+                <option value="1000-2000">1000-2000</option>
+                <option value="2000-3000">2000-3000</option>
+                <option value="3000-4000">3000-4000</option>
+                <option value="4000-5000">4000-5000</option>
+                <option value="5000-6000">5000-6000</option>
+                <option value="6000-7000">6000-7000</option>
+             </select>
+             <select id="filter-stock">
+                <option value="in-stock">In Stock</option>
+                <option value="out-stock">Sold Out</option>
+             </select>
+        </div>
+        <div class="filter-right">
+            <button class="save-search">SAVE SEARCH</button>
+            <i class="fa-sharp fa-light fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span class="material-symbols-outlined">
+                hotel_class
+                </span>
+            <img  class="share-photo" src="share photo.png" alt="">
+        </div>
+    </div>
+    <div class="part-2">
+        <div class="sidebar">
+            <p>KEYWORD</p>
+            <button class="collapsible">GENDER</button>
+            <div class="content">
+                <p>Women</p>
+                <p>Men</p>
+                <p>Kids</p>
+            </div>
+            <button class="collapsible">CATEGORY</button>
+            <div class="content">
+                <p>Clothing</p>
+                <p>Shoes</p>
+                <p>Bags</p>
+                <p>Accessories</p>
+                <p>Beauty</p>
+                <p>Home</p>
+            </div>
+            
+            <p>Designer</p>
+            <p>Color</p>
+            <p>Material</p>
+            <p>Conditions</p>
+            <p>Sale Discount</p>
+            <p>Store</p>
+        </div>
+        <div class="main-content">
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Product 1">
+                <h4>Dolce & Gabbana</h4>
+                <p>Daymaster Chunky-sole Trainers</p>
+                <p><strong>€443 (30% OFF)</strong> to €1136</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Product 2">
+                <h4>Chloé</h4>
+                <p>Black Woody Flat Sandals</p>
+                <p><strong>€273 (37% OFF)</strong> to €622</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Product 3">
+                <h4>Zimmermann</h4>
+                <p>Halliday Floral Lace Trim Shirt</p>
+                <p><strong>€372 (48% OFF)</strong> to €755</p>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/150" alt="Product 4">
+                <h4>Zimmermann</h4>
+                <p>Ottie Paisley Print Linen Shorts</p>
+                <p>€340 to €637</p>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>
+
+
+
+<!--  
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 20%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .main-content {
+            width: 80%;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-card {
+            width: calc(33.33% - 20px);
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h3>Filters</h3>
+        <p>Keyword</p>
+        <p>Gender</p>
+        <p>Category</p>
+        <p>Designer</p>
+        <p>Color</p>
+        <p>Material</p>
+        <p>Conditions</p>
+        <p>Sale Discount</p>
+        <p>Store</p>
+    </div>
+    <div class="main-content">
+        <div class="product-card">
+            <img src="https://via.placeholder.com/150" alt="Product 1">
+            <h4>Dolce & Gabbana</h4>
+            <p>Daymaster Chunky-sole Trainers</p>
+            <p><strong>€443 (30% OFF)</strong> to €1136</p>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/150" alt="Product 2">
+            <h4>Chloé</h4>
+            <p>Black Woody Flat Sandals</p>
+            <p><strong>€273 (37% OFF)</strong> to €622</p>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/150" alt="Product 3">
+            <h4>Zimmermann</h4>
+            <p>Halliday Floral Lace Trim Shirt</p>
+            <p><strong>€372 (48% OFF)</strong> to €755</p>
+        </div>
+        <div class="product-card">
+            <img src="https://via.placeholder.com/150" alt="Product 4">
+            <h4>Zimmermann</h4>
+            <p>Ottie Paisley Print Linen Shorts</p>
+            <p>€340 to €637</p>
+        </div>
+    </div>
+</body>
+</html> -->

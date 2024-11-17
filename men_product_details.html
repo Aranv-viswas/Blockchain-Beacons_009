@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <style>
+      .product-details {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        gap: 40px;
+      }
+
+      .product-image {
+        padding: 20px;
+        flex: 1;
+        max-width: 500px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+          rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+      }
+      .product-image img {
+        width: 400px;
+        height: 500px;
+      }
+      .product-info {
+        flex: 1;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+          rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        padding: 20px;
+      }
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .price {
+        font-size: 20px;
+        color: #e44d26;
+        margin-bottom: 20px;
+      }
+      .description {
+        margin-bottom: 20px;
+      }
+      .rating {
+        margin-bottom: 15px;
+      }
+      .sizes {
+        margin-bottom: 20px;
+      }
+      .size-options {
+        display: flex;
+        gap: 10px;
+      }
+      .size-option {
+        padding: 8px 16px;
+        border: 1px solid #ddd;
+        cursor: pointer;
+      }
+      .size-option.active {
+        background-color: #333;
+        color: white;
+      }
+      .stock {
+        color: green;
+      }
+      .error {
+        color: red;
+        padding: 20px;
+        text-align: center;
+      }
+      button {
+        padding: 10px;
+        background-color: #5aabf8;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border: none;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 15px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      button {
+        margin: 15px;
+      }
+
+      @media screen and (max-width: 1200px) {
+        .product-details {
+          max-width: 960px;
+          padding: 15px;
+          gap: 30px;
+        }
+
+        .product-image img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      /* Tablets */
+      @media screen and (max-width: 992px) {
+        .product-details {
+          max-width: 720px;
+          padding: 15px;
+          gap: 20px;
+        }
+
+        .product-image {
+          max-width: 400px;
+        }
+
+        .title {
+          font-size: 22px;
+        }
+
+        .price {
+          font-size: 18px;
+        }
+      }
+      /* mobile */
+      @media screen and (max-width: 768px) {
+        .product-details {
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          padding: 10px;
+        }
+
+        .product-image,
+        .product-info {
+          width: 100%;
+          max-width: 500px;
+          flex: none;
+        }
+
+        .product-image {
+          padding: 10px;
+        }
+
+        .product-image img {
+          width: 100%;
+          height: auto;
+          max-height: 400px;
+          object-fit: contain;
+        }
+
+        .size-options {
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+
+        .size-option {
+          padding: 6px 12px;
+          min-width: 40px;
+          text-align: center;
+        }
+      }
+
+      /* Mobile  */
+      @media screen and (max-width: 576px) {
+        .product-details {
+          padding: 10px;
+        }
+
+        .product-image,
+        .product-info {
+          padding: 15px;
+        }
+
+        .title {
+          font-size: 20px;
+        }
+
+        .price {
+          font-size: 16px;
+        }
+
+        .description {
+          font-size: 14px;
+        }
+
+        .rating,
+        .stock,
+        .category {
+          font-size: 14px;
+        }
+
+        .sizes h3 {
+          font-size: 16px;
+        }
+
+        .size-option {
+          padding: 5px 10px;
+          font-size: 14px;
+        }
+
+        button {
+          width: calc(100% - 30px);
+          margin: 15px;
+        }
+
+        button a {
+          font-size: 14px;
+        }
+      }
+
+      /* Extra small devices */
+      @media screen and (max-width: 375px) {
+        .product-details {
+          padding: 5px;
+        }
+
+        .product-image,
+        .product-info {
+          padding: 10px;
+        }
+
+        .title {
+          font-size: 18px;
+        }
+
+        .size-options {
+          justify-content: center;
+        }
+
+        .error {
+          font-size: 14px;
+          padding: 15px;
+        }
+      }
+
+      @media (hover: none) and (pointer: coarse) {
+        .size-option {
+          min-height: 44px;
+          min-width: 44px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        button {
+          min-height: 44px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button><a href="men.html">Back to Men Page</a></button>
+    <div class="product-details"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const productDetails = document.querySelector(".product-details");
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get("id");
+
+        if (!productId) {
+          productDetails.innerHTML =
+            '<div class="error">Product not found</div>';
+          return;
+        }
+
+        fetch("https://menprodetails-default-rtdb.firebaseio.com/.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const product = Object.values(data).find(
+              (p) => p.id.toString() === productId
+            );
+
+            if (!product) {
+              productDetails.innerHTML =
+                '<div class="error">Product not found</div>';
+              return;
+            }
+            productDetails.innerHTML = `
+                        <div class="product-image">
+                            <img src="${product.image}" alt="${product.title}">
+                        </div>
+                        <div class="product-info">
+                            <div class="title">${product.title}</div>
+                            <div class="price">${product.price}</div>
+                            <div class="description">${
+                              product.description
+                            }</div>
+                            <div class="rating">Rating: ${
+                              product.avg_rating
+                            } / 5</div>
+                            <div class="sizes">
+                                <h3>Available Sizes:</h3>
+                                <div class="size-options">
+                                    ${product.size
+                                      .map(
+                                        (size) =>
+                                          `<div class="size-option">${size}</div>`
+                                      )
+                                      .join("")}
+                                </div>
+                            </div>
+                            <div class="stock">In Stock: ${
+                              product.stock
+                            } units</div>
+                            <div class="category">Category: ${
+                              product.categories
+                            }</div>
+                        </div>
+                    `;
+
+            document.querySelectorAll(".size-option").forEach((option) => {
+              option.addEventListener("click", function () {
+                document
+                  .querySelectorAll(".size-option")
+                  .forEach((opt) => opt.classList.remove("active"));
+                this.classList.add("active");
+              });
+            });
+          })
+          .catch((error) => {
+            productDetails.innerHTML = `
+                        <div class="error">
+                            Error loading product details: ${error.message}
+                        </div>
+                    `;
+          });
+      });
+    </script>
+  </body>
+</html>

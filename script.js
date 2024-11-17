@@ -1,3 +1,19 @@
+
+document.addEventListener("DOMContentLoaded", () => {
+  const collapsibles = document.querySelectorAll(".collapsible");
+  collapsibles.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("active");
+      const content = btn.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  });
+});
+
 const images = ["resourse/202309131compare_img_en.gif", "resourse/202309211checkbuy_img_en.gif", "resourse/20230913_fashion_pic_en.png"];
 let currentIndex = 0;
 const sliderImage = document.getElementById("slider-image");
@@ -65,6 +81,7 @@ function prevSlide3() {
 }
 
 setInterval(nextSlide3, 2000); // Change image every 2 seconds
+
 
 
 
