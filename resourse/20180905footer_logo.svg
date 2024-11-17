@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 36 43">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-monogram_b);
+      }
+    </style>
+    <clipPath id="clip-monogram_b">
+      <rect width="36" height="43"/>
+    </clipPath>
+  </defs>
+  <g id="monogram_b" class="cls-1">
+    <g id="Final_Logo_Mark-02" data-name="Final_Logo+Mark-02" transform="translate(-870.9 -449.199)">
+      <path id="路径_9" data-name="路径 9" d="M918.539,494.208v14.844H916.1V494.638l-6.849,14.443h-.917L901.8,494.638v14.414h-.974V494.208c0-1.347-.029-2.608-.029-2.608h2.321l6.476,14.386,6.849-14.386h2.092Z" transform="translate(-20.618 -29.536)"/>
+      <path id="路径_10" data-name="路径 10" d="M889.008,491.237h0c-15.188,0-17.108-14.128-17.108-20.518h0c0-6.391,1.949-20.518,17.108-20.518h.086c15.159,0,17.108,14.128,17.108,20.518h0c0,6.39-1.949,20.518-17.108,20.518h-.086Zm.029-.86h0c13.7,0,15.045-13.469,15.045-19.687h0c0-6.219-1.318-19.687-15.045-19.687h-.057c-13.7,0-15.045,13.469-15.045,19.687h0c0,6.219,1.318,19.687,15.045,19.687h.057Z"/>
+    </g>
+  </g>
+</svg>

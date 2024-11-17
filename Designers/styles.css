@@ -1,0 +1,147 @@
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header and Page Introduction */
+.head h1 {
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+}
+
+.head p {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+/* Alphabet Navigation */
+.alphabet-filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    background-color: #f9f9f9;
+    z-index: 1000;
+}
+
+.alphabet-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.alphabet-filter i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.alphabet-link {
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 14px;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.alphabet-link:hover,
+.alphabet-link.active {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+}
+
+.search-container input {
+    border: 1px solid white;
+    padding: 5px 10px;
+    font-size: 14px;
+    width: 100%;
+    padding-right: 30px;
+    border-radius: 5px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    font-size: 16px;
+    color: #666;
+    pointer-events: none;
+}
+
+/* Designer Sections */
+.designer-section {
+    margin-top: 20px;
+}
+
+.designer-section h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.designer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    text-align: left;
+}
+
+.designer {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .search-container input {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .alphabet-filter {
+        flex-direction: column;
+    }
+
+    .alphabet-link {
+        font-size: 12px;
+        margin: 3px;
+    }
+
+    .search-container input {
+        width: 100%;
+        font-size: 14px;
+        padding: 8px;
+        margin-top: 10px;
+    }
+
+    .designer-grid {
+        grid-template-columns: 1fr;
+    }
+}

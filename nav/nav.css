@@ -1,0 +1,163 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #f8f8f8;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1em;
+    position: relative;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007BFF; /* Hover color */
+}
+
+.nav-links li.sale a {
+    color: red;
+    font-size: 0.9em; /* Slightly smaller font for SALE */
+}
+
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none; /* Initially hidden */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 800px; /* Adjust width for all columns */
+    z-index: 1;
+    border: 1px solid #ddd;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    top: 100%;
+    left: 0;
+    display: flex;
+    gap: 20px; /* Space between columns */
+}
+
+/* Show the dropdown content when hovering over the parent (WOMEN) */
+.dropdown:hover .dropdown-content {
+    display: flex; /* Make it visible on hover */
+}
+
+/* Columns inside dropdown */
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.column h4 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.column a {
+    color: black;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.column a:hover {
+    color: #007BFF; /* Hover color for links */
+}
+
+/* Search Bar with Icons */
+.search-container {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+}
+
+.search-bar {
+    padding: 0.5em;
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding-left: 2.5em; /* Space for scanner icon */
+    outline: none;
+}
+
+.search-bar:focus {
+    border-color: #007BFF;
+}
+
+.scanner-icon, .search-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.scanner-icon {
+    left: 10px;
+}
+
+.search-icon {
+    right: 10px;
+}
+
+/* Hamburger for mobile */
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .dropdown-content {
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
