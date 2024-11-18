@@ -1,10 +1,10 @@
 # Blockchain Beacons_009
 
 ## Introduction
-This project involves creating a clone of an ecommerce website called ModeSens.
+This project involves creating a clone of an ecommerce website called ModeSens. The purpose for this project is to test our frontend development skills that we have learnt till date.
 
 ## Project Type
-Frontend
+Fullstack
 
 ## Deplolyed App
 Frontend: https://modesens-clone-site.netlify.app/
@@ -22,16 +22,13 @@ Frontend: https://modesens-clone-site.netlify.app/
 │   └── swiper-bundle.min.js 
 |
 ├── /pages           
-│   ├── index.html       
+│   ├── index.html 
 │   └── reservation.html 
 |
 └── README.md  
 
 ## Video Walkthrough of the project
-Attach a very short video walkthough of all of the features [ 1 - 3 minutes ]
-
-## Video Walkthrough of the codebase
-Attach a very short video walkthough of codebase [ 1 - 5 minutes ]
+https://youtu.be/rLgp_aT2ntI
 
 ## Features
 - Responsive Design: Ensures a seamless user experience across all devices, from desktops to mobile phones.
@@ -59,6 +56,7 @@ npm start
 3. Viewing Products: Scroll to the "Product Showcase" section to browse the café’s menu items. Hover over any product to view additional details like price and description.
 
 ## Technology Stack
-- html
-- css
-- js
+- HTML
+- CSS
+- JavaScript
+- Firebase
